@@ -1,0 +1,18 @@
+/* A  virtual valse is use by the controller :
+*  - to simulate a perfect valve
+*  - to stop the use of a valve when it is stuck
+*/
+node ValveRobust
+
+  state
+	age : [0,2] : public; // ancienneté de la vanne
+
+  flow stucked : [0,1];
+  init  age :=0;
+  event inc,dec,time;
+  trans
+	stucked=0 |- dec, inc -> age := 0;	
+	stucked=0 & age<2 |- time -> age := age+1;
+	stucked=0 & age=2 |- time -> ;
+       	stucked=1 |- inc, dec, time -> ; 
+edon

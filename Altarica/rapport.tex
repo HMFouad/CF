@@ -1,0 +1,202 @@
+\documentclass[a4paper]{book}
+\usepackage{fullpage}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+
+\usepackage{latexsym}
+\usepackage{fancyhdr}
+\usepackage{makeidx}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{moreverb}
+\usepackage{listings}
+
+\newcommand{\altarica}{{\sc AltaRica}}
+
+\begin{document}
+
+\title{Master 1, Conceptions Formelles\\
+Projet du module \altarica\\
+Synthèse (assistée) d'un contrôleur du niveau d'une cuve}
+
+\date{}
+
+\author{HOCINI Mohamed Fouad \and Ismael Traore \and Fairouz Elouazi}
+
+\maketitle
+
+\chapter{Le sujet}
+\input{tank}
+
+\chapter{Le rapport}
+\section{Rôle de la constante {\tt nbFailures} (2 points)}
+la constante nbFaillures sert à borner le nombre total de vanne pouvant tomber en panne ,la contrainte permet d'imposer les valeurs de la constante nbFailures dans l'intervalle 
+[0,3[.
+\section{Résultats avec le contrôleur initial {\tt Ctrl}}
+
+\subsection{Calcul d'un contrôleur}
+
+\subsubsection{Avec 0 défaillance (1 point)}
+\lstinputlisting{Res/System0FCtrl.res}
+\lstinputlisting{Res/System0FCtrl0F1I.res}
+\lstinputlisting{Res/System0FCtrl0F2I.res}
+\lstinputlisting{Res/System0FCtrl0F3I.res}
+\lstinputlisting{Res/System0FCtrl0F4I.res}
+\paragraph{Interprétation des résultats}
+Dans le cas où les vannes ne sont pas défaillantes, on constate qu'il est possible d'éviter que le système se bloque, ainsi que les situations critiques.
+
+On peut donc déduire qu'une des caractéristique de ce contrôleur est qu'il doit gérer les pannes.
+
+Suite à l'analyse du débit de la vanne de sortie avec les différentes variables out0, out1, out2 on remarque que le contrôleur ne contrôle pas de façon optimale le débit aval.
+
+D'après les résultats de ces variables, le contrôleur peut ouvrir partiellement ou totalement la vanne et éventuellement la fermer.
+\subsubsection{Avec 1 défaillance (1 point)}
+\lstinputlisting{Res/System1FCtrl.res}
+\lstinputlisting{Res/System1FCtrl1F1I.res}
+\lstinputlisting{Res/System1FCtrl1F2I.res}
+\lstinputlisting{Res/System1FCtrl1F3I.res}
+\lstinputlisting{Res/System1FCtrl1F4I.res}
+\paragraph{Interprétation des résultats}
+D'après les résultats, il n'est pas possible de détecter que le système soit bloquer et les situations critiques pouvant survenir au cours du fonctionnement du système.
+
+Cette situation est dû au faite que le contrôleur initial ne gère pas le cas où le système est défaillant.
+
+Il n'est pas possible de contrôler en optimisant le débit aval, car la condition préalable d'éviter les blocages et les situations critiques n'est pas satisfaite.
+
+\subsubsection{Avec 2 défaillances (1 point)}
+\lstinputlisting{Res/System2FCtrl.res}
+\lstinputlisting{Res/System2FCtrl2F1I.res}
+\lstinputlisting{Res/System2FCtrl2F2I.res}
+\lstinputlisting{Res/System2FCtrl2F3I.res}
+\lstinputlisting{Res/System2FCtrl2F4I.res}
+\paragraph{Interprétation des résultats}
+Comme dans le cas précédent où le système a une défaillance, on observe aussi l'apparition de blocages et de situations critiques, donc les remarques précédentes s'appliquent aussi dans ce cas.
+
+\subsubsection{Avec 3 défaillances (1 point)}
+\lstinputlisting{Res/System3FCtrl.res}
+\lstinputlisting{Res/System3FCtrl3F1I.res}
+\lstinputlisting{Res/System3FCtrl3F2I.res}
+\lstinputlisting{Res/System3FCtrl3F3I.res}
+\lstinputlisting{Res/System3FCtrl3F4I.res}
+\paragraph{Interprétation des résultats}
+Comme dans les deux cas précédents où le système a une ou deux défaillance(s), on observe aussi l'apparition de blocages et de situations critiques, donc les remarques précédentes s'appliquent aussi dans ce cas.
+
+\subsection{Calcul des contrôleurs optimisés (2 points)}
+Il a fallu intégrer la gestion des pannes en observant les pannes survenant lors du fonctionnement du système. Une simple assert dans le composant Système et notre contrôleur est capable de détecter les pannes.
+
+\subsubsection{Avec 0 défaillance}
+\lstinputlisting{Res/System0FCtrlOpt.res}
+\lstinputlisting{Res/System0FCtrlOpt0F1I.res}
+\lstinputlisting{Res/System0FCtrlOpt0F2I.res}
+\lstinputlisting{Res/System0FCtrlOpt0F3I.res}
+\lstinputlisting{Res/System0FCtrlOpt0F4I.res}
+
+\subsubsection{Avec 1 défaillance }
+\lstinputlisting{Res/System1FCtrlOpt.res}
+\lstinputlisting{Res/System1FCtrlOpt1F1I.res}
+\lstinputlisting{Res/System1FCtrlOpt1F2I.res}
+\lstinputlisting{Res/System1FCtrlOpt1F3I.res}
+\lstinputlisting{Res/System1FCtrlOpt1F4I.res}
+
+\subsubsection{Avec 2 défaillances }
+\lstinputlisting{Res/System2FCtrlOpt.res}
+\lstinputlisting{Res/System2FCtrlOpt2F1I.res}
+\lstinputlisting{Res/System2FCtrlOpt2F2I.res}
+\lstinputlisting{Res/System2FCtrlOpt2F3I.res}
+\lstinputlisting{Res/System2FCtrlOpt2F4I.res}
+
+\subsubsection{Avec 3 défaillances }
+\lstinputlisting{Res/System3FCtrlOpt.res}
+\lstinputlisting{Res/System3FCtrlOpt3F1I.res}
+\lstinputlisting{Res/System3FCtrlOpt3F2I.res}
+\lstinputlisting{Res/System3FCtrlOpt3F3I.res}
+\lstinputlisting{Res/System3FCtrlOpt3F4I.res}
+
+\section{Rôle des composants {\tt ValveVirtual} et {\tt CtrlVV} (4 points)}
+Le composant ValveVirtual comme son nom l'indique sert à simuler le comportement d'une vanne en parfait état et stopper son utilisation lorsque cette dernière est défaillante.
+L'utilisation des ValveVirtual au sein du CtrlVV permet de gérer les pannes pouvant intervenir lors de l'utilisation d'une vanne afin d'éviter des situations de blocages et critiques (atteinte de la zone 0 ou de la zone nbSensors). Il est préférable de l'utiliser par rapport au contrôleur initiale car le comportement du contrôleur est aléatoire et ne gère pas le cas des pannes.    
+   
+\section{Résultats avec le contrôleur initial {\tt CtrlVV}}
+
+\subsection{Calcul d'un contrôleur}
+
+\subsubsection{Avec 0 défaillance (1 point)}
+\lstinputlisting{Res/System0FCtrlVV.res}
+\lstinputlisting{Res/System0FCtrlVV0F1I.res}
+\lstinputlisting{Res/System0FCtrlVV0F2I.res}
+\lstinputlisting{Res/System0FCtrlVV0F3I.res}
+\lstinputlisting{Res/System0FCtrlVV0F4I.res}
+\paragraph{Interprétation des résultats}
+Dans le cas où les vannes ne sont pas défaillantes, on constate qu'il est possible d'éviter que le système se bloque, ainsi que les situations critiques.
+
+On peut donc déduire qu'une des caractéristique de ce contrôleur est qu'il est capable de gérer les pannes.
+
+Suite à l'analyse du débit de la vanne de sortie avec les différentes variables out0, out1, out2 on remarque que le contrôleur ne contrôle pas de façon optimale le débit aval.
+
+D'après les résultats de ces variables, le contrôleur peut ouvrir partiellement ou totalement la vanne et éventuellement la fermer.
+\subsubsection{Avec 1 défaillance (1 point)}
+\lstinputlisting{Res/System1FCtrlVV.res}
+\lstinputlisting{Res/System1FCtrlVV1F1I.res}
+\lstinputlisting{Res/System1FCtrlVV1F2I.res}
+\lstinputlisting{Res/System1FCtrlVV1F3I.res}
+\lstinputlisting{Res/System1FCtrlVV1F4I.res}
+\paragraph{Interprétation des résultats}
+D'après les résultats, il est possible de détecter que le système soit bloquer et les situations critiques pouvant survenir au cours du fonctionnement du système.
+
+Cette situation est dû au faite que le contrôleur à vannes simulées gère le cas où le système est défaillant en bloquant la vanne en cas de défaillance.
+
+
+\subsubsection{Avec 2 défaillances (1 point)}
+\lstinputlisting{Res/System2FCtrlVV.res}
+\lstinputlisting{Res/System2FCtrlVV2F1I.res}
+\lstinputlisting{Res/System2FCtrlVV2F2I.res}
+\lstinputlisting{Res/System2FCtrlVV2F3I.res}
+\lstinputlisting{Res/System2FCtrlVV2F4I.res}
+\paragraph{Interprétation des résultats}
+Comme dans le cas précédent où le système a une défaillance, il est possible de détecter l'apparition de blocages et de situations critiques, donc les remarques précédentes s'appliquent aussi dans ce cas.
+\subsubsection{Avec 3 défaillances (1 point)}
+\lstinputlisting{Res/System3FCtrlVV.res}
+\lstinputlisting{Res/System3FCtrlVV3F1I.res}
+\lstinputlisting{Res/System3FCtrlVV3F2I.res}
+\lstinputlisting{Res/System3FCtrlVV3F3I.res}
+\lstinputlisting{Res/System3FCtrlVV3F4I.res}
+\paragraph{Interprétation des résultats}
+Comme dans les deux cas précédents où le système a une ou deux défaillance(s), il est possible de détecter l'apparition de blocages et de situations critiques, donc les remarques précédentes s'appliquent aussi dans ce cas.
+\subsection{Calcul des contrôleurs optimisés }
+Pour optimiser ce contrôleur nous avons du intégrer une vanne qui ne tombe jamais en panne pour rendre le système plus robuste au lieu de bloquer la vanne comme le fait le contrôleur précédent. 
+
+\subsubsection{Avec 0 défaillance}
+\lstinputlisting{Res/System0FCtrlVR.res}
+\lstinputlisting{Res/System0FCtrlVR0F1I.res}
+\lstinputlisting{Res/System0FCtrlVR0F2I.res}
+\lstinputlisting{Res/System0FCtrlVR0F3I.res}
+\lstinputlisting{Res/System0FCtrlVR0F4I.res}
+
+\subsubsection{Avec 1 défaillance }
+\lstinputlisting{Res/System1FCtrlVR.res}
+\lstinputlisting{Res/System1FCtrlVR1F1I.res}
+\lstinputlisting{Res/System1FCtrlVR1F2I.res}
+\lstinputlisting{Res/System1FCtrlVR1F3I.res}
+\lstinputlisting{Res/System1FCtrlVR1F4I.res}
+
+\subsubsection{Avec 2 défaillances (1 point)}
+\lstinputlisting{Res/System2FCtrlVR.res}
+\lstinputlisting{Res/System2FCtrlVR2F1I.res}
+\lstinputlisting{Res/System2FCtrlVR2F2I.res}
+\lstinputlisting{Res/System2FCtrlVR2F3I.res}
+\lstinputlisting{Res/System2FCtrlVR2F4I.res}
+
+\subsubsection{Avec 3 défaillances (1 point)}
+\lstinputlisting{Res/System3FCtrlVR.res}
+\lstinputlisting{Res/System3FCtrlVR3F1I.res}
+\lstinputlisting{Res/System3FCtrlVR3F2I.res}
+\lstinputlisting{Res/System3FCtrlVR3F3I.res}
+\lstinputlisting{Res/System3FCtrlVR3F4I.res}
+\section{Conclusion (2 points)}
+Notre choix final portera sur le System3FCtrlVR car il permet d'éviter à la fois les situation redoutées tels que le blocage du sytème et les niveaux critiques. De plus il nous permet de maximiser le débit de la vanne aval en utilisant les priorités d'Altarica. Le but est de privilégier l’augmentation du débit de la vanne aval par rapport aux autres actions, et privilégier la stagnation du débit par rapport à sa diminution.
+ Une autre alternative aurait été de réparer la vanne mais les contraintes du cahier des charges ne le permettent pas. 
+ 
+\end{document}
