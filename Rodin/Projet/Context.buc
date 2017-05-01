@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.constant name="'" org.eventb.core.identifier="NbWagon"/>
+<org.eventb.core.constant name="(" org.eventb.core.identifier="Destination"/>
+<org.eventb.core.axiom name=")" org.eventb.core.label="axm1" org.eventb.core.predicate="NbWagon ∈ ℕ1"/>
+<org.eventb.core.axiom name="*" org.eventb.core.label="axm2" org.eventb.core.predicate="Destination ∈ 1‥NbWagon → Ville"/>
+<org.eventb.core.carrierSet name="-" org.eventb.core.identifier="Ville"/>
+<org.eventb.core.constant name="." org.eventb.core.identifier="Toulouse"/>
+<org.eventb.core.constant name="/" org.eventb.core.identifier="Bayonne"/>
+<org.eventb.core.axiom name="0" org.eventb.core.label="axm3" org.eventb.core.predicate="partition(Ville, {Toulouse}, {Bayonne})"/>
+<org.eventb.core.carrierSet name="1" org.eventb.core.identifier="Feu"/>
+<org.eventb.core.constant name="6" org.eventb.core.identifier="Tou"/>
+<org.eventb.core.constant name="7" org.eventb.core.identifier="Bay"/>
+<org.eventb.core.constant name="2" org.eventb.core.identifier="Vert"/>
+<org.eventb.core.constant name="3" org.eventb.core.identifier="Rouge"/>
+<org.eventb.core.axiom name="8" org.eventb.core.label="axm4" org.eventb.core.predicate="partition(Aiguille, {Tou}, {Bay})"/>
+<org.eventb.core.axiom name="4" org.eventb.core.label="axm5" org.eventb.core.predicate="partition(Feu, {Vert}, {Rouge})"/>
+<org.eventb.core.carrierSet name="5" org.eventb.core.identifier="Aiguille"/>
+</org.eventb.core.contextFile>

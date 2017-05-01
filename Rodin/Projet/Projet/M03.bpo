@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="144">
+<org.eventb.core.poIdentifier name="Aiguille" org.eventb.core.type="ℙ(Aiguille)"/>
+<org.eventb.core.poIdentifier name="Feu" org.eventb.core.type="ℙ(Feu)"/>
+<org.eventb.core.poIdentifier name="Ville" org.eventb.core.type="ℙ(Ville)"/>
+<org.eventb.core.poIdentifier name="Bay" org.eventb.core.type="Aiguille"/>
+<org.eventb.core.poIdentifier name="Bayonne" org.eventb.core.type="Ville"/>
+<org.eventb.core.poIdentifier name="Destination" org.eventb.core.type="ℙ(ℤ×Ville)"/>
+<org.eventb.core.poIdentifier name="NbWagon" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Rouge" org.eventb.core.type="Feu"/>
+<org.eventb.core.poIdentifier name="Tou" org.eventb.core.type="Aiguille"/>
+<org.eventb.core.poIdentifier name="Toulouse" org.eventb.core.type="Ville"/>
+<org.eventb.core.poIdentifier name="Vert" org.eventb.core.type="Feu"/>
+<org.eventb.core.poPredicate name="Destinatioo" org.eventb.core.predicate="NbWagon∈ℕ1" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="Destinatiop" org.eventb.core.predicate="Destination∈1 ‥ NbWagon → Ville" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="Destinatioq" org.eventb.core.predicate="partition(Ville,{Toulouse},{Bayonne})" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="Destinatior" org.eventb.core.predicate="partition(Aiguille,{Tou},{Bay})" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="Destinatios" org.eventb.core.predicate="partition(Feu,{Vert},{Rouge})" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="144">
+<org.eventb.core.poIdentifier name="Aig" org.eventb.core.type="Aiguille"/>
+<org.eventb.core.poIdentifier name="Aiguil" org.eventb.core.type="Aiguille"/>
+<org.eventb.core.poIdentifier name="Color" org.eventb.core.type="Feu"/>
+<org.eventb.core.poIdentifier name="IWagon" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="IndWagon" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="IndiceWagon" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="VBayne" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="VByne" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="VTlse" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="VToulse" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="VoieBayonne" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="VoieByne" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="VoieTlse" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="VoieToulouse" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poPredicate name="VoieToulousf" org.eventb.core.predicate="VoieToulouse⊆1 ‥ NbWagon" org.eventb.core.source="/Projet/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="VoieToulousg" org.eventb.core.predicate="VoieBayonne⊆1 ‥ NbWagon" org.eventb.core.source="/Projet/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poPredicate name="VoieTouloush" org.eventb.core.predicate="VoieTlse⊆1 ‥ NbWagon" org.eventb.core.source="/Projet/M01.bum|org.eventb.core.machineFile#M01|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poPredicate name="VoieToulousi" org.eventb.core.predicate="VoieByne⊆1 ‥ NbWagon" org.eventb.core.source="/Projet/M01.bum|org.eventb.core.machineFile#M01|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poPredicate name="VoieToulousj" org.eventb.core.predicate="IndiceWagon∈1 ‥ NbWagon+1" org.eventb.core.source="/Projet/M01.bum|org.eventb.core.machineFile#M01|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poPredicate name="VoieToulousk" org.eventb.core.predicate="VoieTlse={i⦂ℤ·i∈1 ‥ IndiceWagon − 1∧Destination(i)=Toulouse ∣ i}" org.eventb.core.source="/Projet/M01.bum|org.eventb.core.machineFile#M01|org.eventb.core.invariant#var12"/>
+<org.eventb.core.poPredicate name="VoieToulousl" org.eventb.core.predicate="VoieByne={i⦂ℤ·i∈1 ‥ IndiceWagon − 1∧Destination(i)=Bayonne ∣ i}" org.eventb.core.source="/Projet/M01.bum|org.eventb.core.machineFile#M01|org.eventb.core.invariant#var13"/>
+<org.eventb.core.poPredicate name="VoieToulousm" org.eventb.core.predicate="VTlse⊆1 ‥ NbWagon" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poPredicate name="VoieToulousn" org.eventb.core.predicate="VByne⊆1 ‥ NbWagon" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poPredicate name="VoieToulouso" org.eventb.core.predicate="IWagon∈1 ‥ NbWagon+1" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poPredicate name="VoieToulousp" org.eventb.core.predicate="VTlse={i⦂ℤ·i∈1 ‥ IWagon − 1∧Destination(i)=Toulouse ∣ i}" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poPredicate name="VoieToulousq" org.eventb.core.predicate="VByne={i⦂ℤ·i∈1 ‥ IWagon − 1∧Destination(i)=Bayonne ∣ i}" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.invariant#inv5"/>
+<org.eventb.core.poPredicate name="VoieToulousr" org.eventb.core.predicate="Aig∈Aiguille" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.invariant#var8"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="inv7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#HYPContey."/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ·i∈1 ‥ IndWagon − 1⇒i∈dom(Destination)∧Destination∈ℤ ⇸ Ville" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var14"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var14"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#HYPContey."/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="inv8/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#HYPContey\/"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ·i∈1 ‥ IndWagon − 1⇒i∈dom(Destination)∧Destination∈ℤ ⇸ Ville" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var15"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var15"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#HYPContey\/"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ))⊆1 ‥ NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#HYPContey.|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ))⊆1 ‥ NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#HYPContey.|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈1 ‥ NbWagon+1" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#HYPContey.|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ))={i⦂ℤ·i∈1 ‥ 1 − 1∧Destination(i)=Toulouse ∣ i}" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var14"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var14"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#HYPContey\/|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ))={i⦂ℤ·i∈1 ‥ 1 − 1∧Destination(i)=Bayonne ∣ i}" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var15"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var15"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Rouge=Vert⇒1≤NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var16"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var16"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#INITIALISATION\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act3/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ))=(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#'|org.eventb.core.action#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#'|org.eventb.core.action#("/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#'"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#INITIALISATION\/act3\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act4/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ))=(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#'|org.eventb.core.action#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#'|org.eventb.core.action#)"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#'"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#INITIALISATION\/act4\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTVoieToulousf" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="144">
+<org.eventb.core.poIdentifier name="VToulse'" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="IndiceWagon'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="VByne'" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="Aiguil'" org.eventb.core.type="Aiguille"/>
+<org.eventb.core.poIdentifier name="VTlse'" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="VBayne'" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="Color'" org.eventb.core.type="Feu"/>
+<org.eventb.core.poIdentifier name="IndWagon'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="VoieToulouse'" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="IWagon'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Aig'" org.eventb.core.type="Aiguille"/>
+<org.eventb.core.poIdentifier name="VoieBayonne'" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPVoieToulousf" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTIDENTVoieToulousf" org.eventb.core.poStamp="144"/>
+<org.eventb.core.poSequent name="SetAigToulouse/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousg"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Aig=Bay" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt1|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt1|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt3"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#SetAigToulouse\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTVoieToulousg" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="144">
+<org.eventb.core.poIdentifier name="Aiguil'" org.eventb.core.type="Aiguille"/>
+<org.eventb.core.poIdentifier name="Aig'" org.eventb.core.type="Aiguille"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPVoieToulousg" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTIDENTVoieToulousg" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="IWagon≤NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt3|org.eventb.core.guard#internal1"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Destination(IWagon)=Toulouse" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt3|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Aiguil=Bay" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt3|org.eventb.core.guard#internal2"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="IWagon≤NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt3|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="SetAigBayonne/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieTouloush("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IndWagon∈dom(Destination)∧Destination∈ℤ ⇸ Ville" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt4|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt4|org.eventb.core.guard#'"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieTouloush("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SetAigBayonne/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieTouloush"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IWagon≤NbWagon" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt2|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt2|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt4"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#SetAigBayonne\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SetAigBayonne/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieTouloush"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Destination(IWagon)=Bayonne" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt2|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt2|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt4"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#SetAigBayonne\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SetAigBayonne/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieTouloush"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Aig=Tou" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt2|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt2|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt4"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#SetAigBayonne\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTVoieTouloush" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="144">
+<org.eventb.core.poIdentifier name="Aiguil'" org.eventb.core.type="Aiguille"/>
+<org.eventb.core.poIdentifier name="Aig'" org.eventb.core.type="Aiguille"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPVoieTouloush(" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTIDENTVoieTouloush" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="IndWagon≤NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt4|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPVoieTouloush" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieTouloush(" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Destination(IndWagon)=Bayonne" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt4|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Aiguil=Tou" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt4|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="Color=Rouge" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt4|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="SetColorVert/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousi'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IndWagon∈dom(Destination)∧Destination∈ℤ ⇸ Ville∧((Destination(IndWagon)=Toulouse∧Aiguil=Tou)∨(IndWagon∈dom(Destination)∧Destination∈ℤ ⇸ Ville))" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt5|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt5|org.eventb.core.guard#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousi'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SetColorVert/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousi"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Vert=Vert⇒IndWagon≤NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var16"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var16"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#SetColorVert\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTVoieToulousi" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="144">
+<org.eventb.core.poIdentifier name="Color'" org.eventb.core.type="Feu"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPVoieToulousi'" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTIDENTVoieToulousi" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="IndWagon≤NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt5|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPVoieToulousi" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousi'" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="(Destination(IndWagon)=Toulouse∧Aiguil=Tou)∨(Destination(IndWagon)=Bayonne∧Aiguil=Bay)" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt5|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="SetColorRouge/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousj'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IndWagon∈dom(Destination)∧Destination∈ℤ ⇸ Ville∧((Destination(IndWagon)=Toulouse∧Aiguil=Bay)∨(IndWagon∈dom(Destination)∧Destination∈ℤ ⇸ Ville))" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt6|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt6|org.eventb.core.guard#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousj'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SetColorRouge/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousj"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Rouge=Vert⇒IndWagon≤NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var16"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var16"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#SetColorRouge\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTVoieToulousj" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="144">
+<org.eventb.core.poIdentifier name="Color'" org.eventb.core.type="Feu"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPVoieToulousj'" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTIDENTVoieToulousj" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="IndWagon≤NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt6|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPVoieToulousj" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousj'" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="(Destination(IndWagon)=Toulouse∧Aiguil=Bay)∨(Destination(IndWagon)=Bayonne∧Aiguil=Tou)∨IndWagon=NbWagon+1" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt6|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="GrpToulouse/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousk("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ·i∈IndWagon ‥ IndiceTMP⇒i∈dom(Destination)∧Destination∈ℤ ⇸ Ville" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9|org.eventb.core.guard#grd5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9|org.eventb.core.guard#grd5"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousk("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpToulouse/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousk)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IndiceTMP=NbWagon∨(IndiceTMP+1∈dom(Destination)∧Destination∈ℤ ⇸ Ville)" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9|org.eventb.core.guard#grd6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9|org.eventb.core.guard#grd6"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousk)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpToulouse/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousk"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="VToulse∪IndWagon ‥ IndiceTMP⊆1 ‥ NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpToulouse\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#HYPContey.|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpToulouse/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousk"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IndiceTMP+1∈1 ‥ NbWagon+1" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpToulouse\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#HYPContey.|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpToulouse/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousk"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="VToulse∪IndWagon ‥ IndiceTMP={i⦂ℤ·i∈1 ‥ IndiceTMP+1 − 1∧Destination(i)=Toulouse ∣ i}" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var14"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var14"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpToulouse\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#HYPContey\/|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpToulouse/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousk"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="VBayne={i⦂ℤ·i∈1 ‥ IndiceTMP+1 − 1∧Destination(i)=Bayonne ∣ i}" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var15"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var15"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpToulouse\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpToulouse/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousk"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Color=Vert⇒IndiceTMP+1≤NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var16"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var16"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpToulouse\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpToulouse/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousk"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IndiceTMP∈IWagon ‥ NbWagon" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpToulouse\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpToulouse/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousk"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ·i∈IWagon ‥ IndiceTMP⇒Destination(i)=Toulouse" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3|org.eventb.core.guard#grd5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3|org.eventb.core.guard#grd5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpToulouse\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpToulouse/grd4/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousk"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IWagon≤NbWagon" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3|org.eventb.core.guard#grd7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3|org.eventb.core.guard#grd7"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpToulouse\/grd4\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpToulouse/grd5/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousk"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Aig=Tou" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3|org.eventb.core.guard#grd8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3|org.eventb.core.guard#grd8"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpToulouse\/grd5\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpToulouse/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousk"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IWagon=IndiceTMP+1" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3|org.eventb.core.action#act1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt3|org.eventb.core.action#act1"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpToulouse\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTVoieToulousk" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="144">
+<org.eventb.core.poIdentifier name="VToulse'" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="IndiceTMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="VTlse'" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="IndWagon'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="IWagon'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPVoieToulousk(" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTIDENTVoieToulousk" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="IndiceTMP∈IndWagon ‥ NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPVoieToulousk)" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousk(" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀i⦂ℤ·i∈IndWagon ‥ IndiceTMP⇒Destination(i)=Toulouse" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9|org.eventb.core.guard#grd5"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPVoieToulousk" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousk)" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="IndiceTMP=NbWagon∨Destination(IndiceTMP+1)=Bayonne" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9|org.eventb.core.guard#grd6"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="IndWagon≤NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9|org.eventb.core.guard#grd7"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Aiguil=Tou" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9|org.eventb.core.guard#grd:"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="Color=Vert" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt9|org.eventb.core.guard#grd9"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="GrpBayonne/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousl("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ·i∈IndWagon ‥ IndiceTMP⇒i∈dom(Destination)∧Destination∈ℤ ⇸ Ville" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10|org.eventb.core.guard#grd1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10|org.eventb.core.guard#grd1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousl("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpBayonne/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousl)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IndiceTMP=NbWagon∨(IndiceTMP+1∈dom(Destination)∧Destination∈ℤ ⇸ Ville)" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10|org.eventb.core.guard#grd2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10|org.eventb.core.guard#grd2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousl)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpBayonne/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousl"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="VBayne∪IndWagon ‥ IndiceTMP⊆1 ‥ NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpBayonne\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#HYPContey.|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpBayonne/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousl"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IndiceTMP+1∈1 ‥ NbWagon+1" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpBayonne\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#HYPContey.|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpBayonne/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousl"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="VToulse={i⦂ℤ·i∈1 ‥ IndiceTMP+1 − 1∧Destination(i)=Toulouse ∣ i}" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var14"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var14"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpBayonne\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#HYPContey\/|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpBayonne/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousl"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="VBayne∪IndWagon ‥ IndiceTMP={i⦂ℤ·i∈1 ‥ IndiceTMP+1 − 1∧Destination(i)=Bayonne ∣ i}" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var15"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var15"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpBayonne\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpBayonne/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousl"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Color=Vert⇒IndiceTMP+1≤NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var16"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var16"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpBayonne\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpBayonne/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousl"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IWagon≤NbWagon" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4|org.eventb.core.guard#grd5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4|org.eventb.core.guard#grd5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpBayonne\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpBayonne/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousl"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IndiceTMP∈IWagon ‥ NbWagon" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpBayonne\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpBayonne/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousl"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ·i∈IWagon ‥ IndiceTMP⇒Destination(i)=Bayonne" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4|org.eventb.core.guard#grd1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4|org.eventb.core.guard#grd1"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpBayonne\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpBayonne/grd5/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousl"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Aig=Bay" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4|org.eventb.core.guard#grd6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4|org.eventb.core.guard#grd6"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpBayonne\/grd5\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="GrpBayonne/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousl"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IWagon=IndiceTMP+1" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4|org.eventb.core.action#act1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#evt4|org.eventb.core.action#act1"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#GrpBayonne\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTVoieToulousl" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="144">
+<org.eventb.core.poIdentifier name="VByne'" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="IndiceTMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="VBayne'" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="IndWagon'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="IWagon'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPVoieToulousl(" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTIDENTVoieToulousl" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="IndiceTMP∈IndWagon ‥ NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPVoieToulousl)" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousl(" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀i⦂ℤ·i∈IndWagon ‥ IndiceTMP⇒Destination(i)=Bayonne" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10|org.eventb.core.guard#grd1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPVoieToulousl" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTHYPVoieToulousl)" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="IndiceTMP=NbWagon∨Destination(IndiceTMP+1)=Toulouse" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10|org.eventb.core.guard#grd2"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="IndWagon≤NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10|org.eventb.core.guard#grd5"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Aiguil=Bay" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10|org.eventb.core.guard#grd7"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="Color=Vert" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt10|org.eventb.core.guard#grd6"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Fin/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousm"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Rouge=Vert⇒IndWagon≤NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var16"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#var6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt8"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var16"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#Fin\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="Fin/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousm"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="VToulse=VTlse" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#var6|org.eventb.core.action#act1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#var6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#var6|org.eventb.core.action#act1"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#Fin\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="Fin/act2/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTALLHYPVoieToulousm"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="VBayne=VByne" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#var6|org.eventb.core.action#act2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#var6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Projet/M02.bum|org.eventb.core.machineFile#M02|org.eventb.core.event#var6|org.eventb.core.action#act2"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poSequent#Fin\/act2\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTVoieToulousm" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="144">
+<org.eventb.core.poIdentifier name="Color'" org.eventb.core.type="Feu"/>
+<org.eventb.core.poIdentifier name="VoieToulouse'" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="VoieBayonne'" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPVoieToulousm" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#EVTIDENTVoieToulousm" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="IndWagon=NbWagon+1" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt8|org.eventb.core.guard#act3"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="IWagon=NbWagon+1" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt8|org.eventb.core.guard#act4"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="IndiceWagon=NbWagon+1" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.event#evt8|org.eventb.core.guard#act6"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPContey." org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="VToulse⊆1 ‥ NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="VBayne⊆1 ‥ NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="IndWagon∈1 ‥ NbWagon+1" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="Aiguil∈Aiguille" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#inv5"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Color∈Feu" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var7"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPContey/" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#HYPContey." org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="VToulse={i⦂ℤ·i∈1 ‥ IndWagon − 1∧Destination(i)=Toulouse ∣ i}" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var14"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Projet/M03.bpo|org.eventb.core.poFile#M03|org.eventb.core.poPredicateSet#HYPContey\/" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="VBayne={i⦂ℤ·i∈1 ‥ IndWagon − 1∧Destination(i)=Bayonne ∣ i}" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var15"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="Color=Vert⇒IndWagon≤NbWagon" org.eventb.core.source="/Projet/M03.bum|org.eventb.core.machineFile#M03|org.eventb.core.invariant#var16"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

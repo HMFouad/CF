@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="axm6/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Feu">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Ville,{Toulouse},{Bayonne}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Feu,{Vert},{Rouge}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p0"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5,p0"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="Rouge" org.eventb.core.type="Feu"/>
+<org.eventb.core.prIdent name="Vert" org.eventb.core.type="Feu"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Feu={Vert,Rouge}"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(Ville,{Toulouse},{Bayonne})">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="Ville"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="Ville"/>
+<org.eventb.core.prIdent name="Ville" org.eventb.core.type="ℙ(Ville)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬Toulouse=Bayonne">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="Ville"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="Ville"/>
+<org.eventb.core.prIdent name="Ville" org.eventb.core.type="ℙ(Ville)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="Ville={Toulouse,Bayonne}">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="Ville"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="Ville"/>
+<org.eventb.core.prIdent name="Ville" org.eventb.core.type="ℙ(Ville)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(Feu,{Vert},{Rouge})"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="¬Vert=Rouge"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="axm7/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Aiguille">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Ville,{Toulouse},{Bayonne}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Feu,{Vert},{Rouge}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6,p7"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p6,p7"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Aiguille,{Tou},{Bay}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8,p0"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p8,p0"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="Bay" org.eventb.core.type="Aiguille"/>
+<org.eventb.core.prIdent name="Tou" org.eventb.core.type="Aiguille"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(Aiguille,{Tou},{Bay})"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="Feu={Vert,Rouge}">
+<org.eventb.core.prIdent name="Feu" org.eventb.core.type="ℙ(Feu)"/>
+<org.eventb.core.prIdent name="Rouge" org.eventb.core.type="Feu"/>
+<org.eventb.core.prIdent name="Vert" org.eventb.core.type="Feu"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="Aiguille={Tou,Bay}"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(Ville,{Toulouse},{Bayonne})">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="Ville"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="Ville"/>
+<org.eventb.core.prIdent name="Ville" org.eventb.core.type="ℙ(Ville)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬Toulouse=Bayonne">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="Ville"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="Ville"/>
+<org.eventb.core.prIdent name="Ville" org.eventb.core.type="ℙ(Ville)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="¬Tou=Bay"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="Ville={Toulouse,Bayonne}">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="Ville"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="Ville"/>
+<org.eventb.core.prIdent name="Ville" org.eventb.core.type="ℙ(Ville)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(Feu,{Vert},{Rouge})">
+<org.eventb.core.prIdent name="Feu" org.eventb.core.type="ℙ(Feu)"/>
+<org.eventb.core.prIdent name="Rouge" org.eventb.core.type="Feu"/>
+<org.eventb.core.prIdent name="Vert" org.eventb.core.type="Feu"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬Vert=Rouge">
+<org.eventb.core.prIdent name="Feu" org.eventb.core.type="ℙ(Feu)"/>
+<org.eventb.core.prIdent name="Rouge" org.eventb.core.type="Feu"/>
+<org.eventb.core.prIdent name="Vert" org.eventb.core.type="Feu"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

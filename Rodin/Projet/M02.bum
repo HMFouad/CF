@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="Création et envoie des groupes avec l'aiguillage" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="act1" org.eventb.core.assignment="VTlse ≔ ∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="act2" org.eventb.core.assignment="VByne ≔ ∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="VoieToulouse ≔ ∅" org.eventb.core.comment="Prenant que la voie est vide à l'initialisation" org.eventb.core.label="act3"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="VoieBayonne ≔ ∅" org.eventb.core.comment="Prenant que la voie est vide à l'initialisation" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="act3" org.eventb.core.assignment="IWagon ≔ 1" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="act4" org.eventb.core.assignment="Aig ≔ Tou" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="act5" org.eventb.core.assignment="IndiceWagon ≔ 1" org.eventb.core.label="act7"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="Context"/>
+<org.eventb.core.refinesMachine name=")" org.eventb.core.target="M01"/>
+<org.eventb.core.variable name="var1" org.eventb.core.comment="Les wagons dans la voie de Toulouse temp" org.eventb.core.identifier="VTlse"/>
+<org.eventb.core.variable name="var2" org.eventb.core.comment="Les wagons dans la voie de Bayonne temp" org.eventb.core.identifier="VByne"/>
+<org.eventb.core.variable name="var3" org.eventb.core.comment="Indice du Wagon en cours" org.eventb.core.identifier="IWagon"/>
+<org.eventb.core.variable name="var4" org.eventb.core.identifier="VoieToulouse"/>
+<org.eventb.core.variable name="var5" org.eventb.core.identifier="VoieBayonne"/>
+<org.eventb.core.invariant name="inv1" org.eventb.core.label="inv1" org.eventb.core.predicate="VTlse ⊆ 1‥ NbWagon"/>
+<org.eventb.core.invariant name="inv2" org.eventb.core.label="inv2" org.eventb.core.predicate="VByne ⊆ 1‥ NbWagon"/>
+<org.eventb.core.invariant name="inv3" org.eventb.core.label="inv3" org.eventb.core.predicate="IWagon ∈ 1‥ NbWagon+1"/>
+<org.eventb.core.invariant name="inv4" org.eventb.core.label="inv5" org.eventb.core.predicate="VTlse = {i∣ i∈1‥IWagon−1 ∧ Destination(i)=Toulouse}"/>
+<org.eventb.core.invariant name="inv5" org.eventb.core.label="inv6" org.eventb.core.predicate="VByne = {i∣ i∈1‥IWagon−1 ∧ Destination(i)=Bayonne}"/>
+<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SetAigTlse">
+<org.eventb.core.action name="(" org.eventb.core.assignment="Aig ≔ Tou" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="IWagon ≤ NbWagon"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="Destination(IWagon) = Toulouse"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="Aig = Bay"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SetAigByne">
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="IWagon ≤ NbWagon"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="Destination(IWagon) = Bayonne"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd3" org.eventb.core.predicate="Aig = Tou"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="Aig ≔ Bay" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="var7" org.eventb.core.identifier="Aig"/>
+<org.eventb.core.invariant name="var8" org.eventb.core.label="inv7" org.eventb.core.predicate="Aig ∈ Aiguille"/>
+<org.eventb.core.event name="evt3" org.eventb.core.comment="Préparation et envoie du groupe de Wagons destination Toulouse" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="GToulouse">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="IndiceTMP"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="IndiceTMP ∈ IWagon ‥NbWagon"/>
+<org.eventb.core.action name="act1" org.eventb.core.assignment="IWagon ≔ IndiceTMP +1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="grd4" org.eventb.core.assignment="VTlse ≔ VTlse ∪ IWagon‥IndiceTMP" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="grd5" org.eventb.core.label="grd2" org.eventb.core.predicate="∀i·i∈IWagon‥IndiceTMP ⇒ Destination(i)=Toulouse"/>
+<org.eventb.core.guard name="grd6" org.eventb.core.label="grd3" org.eventb.core.predicate="IndiceTMP=NbWagon ∨ Destination(IndiceTMP+1)=Bayonne"/>
+<org.eventb.core.guard name="grd7" org.eventb.core.label="grd4" org.eventb.core.predicate="IWagon ≤ NbWagon"/>
+<org.eventb.core.guard name="grd8" org.eventb.core.label="grd5" org.eventb.core.predicate="Aig = Tou"/>
+<org.eventb.core.refinesEvent name="grd9" org.eventb.core.target="GroupToulouse"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt4" org.eventb.core.comment="Préparation et envoie du groupe de Wagons destination Bayonne" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="GBayonne">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="IndiceTMP"/>
+<org.eventb.core.guard name="grd5" org.eventb.core.label="grd1" org.eventb.core.predicate="IWagon ≤ NbWagon"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="IndiceTMP ∈ IWagon ‥NbWagon"/>
+<org.eventb.core.guard name="grd1" org.eventb.core.label="grd3" org.eventb.core.predicate="∀i·i∈IWagon‥IndiceTMP ⇒ Destination(i)=Bayonne"/>
+<org.eventb.core.action name="act1" org.eventb.core.assignment="IWagon ≔ IndiceTMP +1" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="grd2" org.eventb.core.label="grd4" org.eventb.core.predicate="IndiceTMP=NbWagon ∨ Destination(IndiceTMP+1)=Toulouse"/>
+<org.eventb.core.action name="grd4" org.eventb.core.assignment="VByne ≔ VByne ∪ IWagon‥IndiceTMP" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="grd6" org.eventb.core.label="grd5" org.eventb.core.predicate="Aig = Bay"/>
+<org.eventb.core.refinesEvent name="grd7" org.eventb.core.target="GroupBayonne"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="var6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Fin">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Fin"/>
+<org.eventb.core.action name="act1" org.eventb.core.assignment="VoieToulouse ≔ VTlse" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="act2" org.eventb.core.assignment="VoieBayonne ≔ VByne" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="act3" org.eventb.core.label="grd1" org.eventb.core.predicate="IWagon = NbWagon + 1"/>
+<org.eventb.core.guard name="act4" org.eventb.core.label="grd2" org.eventb.core.predicate="IndiceWagon = NbWagon+1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="var9" org.eventb.core.comment="Indice du Wagon de la machine M01" org.eventb.core.identifier="IndiceWagon"/>
+</org.eventb.core.machineFile>

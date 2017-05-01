@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="Machine abstraite" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="(" org.eventb.core.assignment="VoieToulouse ≔ ∅" org.eventb.core.comment="Prenant que la voie est vide à l'initialisation" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="VoieBayonne ≔ ∅" org.eventb.core.comment="Prenant que la voie est vide à l'initialisation" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name=")" org.eventb.core.target="Context"/>
+<org.eventb.core.variable name="*" org.eventb.core.comment="Les wagons dans la voie de Toulouse" org.eventb.core.identifier="VoieToulouse"/>
+<org.eventb.core.variable name="+" org.eventb.core.comment="Les wagons dans la voie de Bayonne" org.eventb.core.identifier="VoieBayonne"/>
+<org.eventb.core.invariant name="." org.eventb.core.comment="Le nombre de wagon doit être entre 1 et NbWagon" org.eventb.core.label="inv2" org.eventb.core.predicate="VoieToulouse ⊆ 1‥ NbWagon"/>
+<org.eventb.core.invariant name="/" org.eventb.core.comment="Le nombre de wagon doit être entre 1 et NbWagon" org.eventb.core.label="inv3" org.eventb.core.predicate="VoieBayonne ⊆ 1‥ NbWagon"/>
+<org.eventb.core.event name="0" org.eventb.core.comment="ce qu'on doit avoir à la fin" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Fin">
+<org.eventb.core.action name="-" org.eventb.core.assignment="VoieToulouse ≔ {i∣ i∈1‥NbWagon ∧ Destination(i)=Toulouse}" org.eventb.core.comment="La voie de Toulouse doit contenir tout les wagons qui ont la destination Toulouse" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="VoieBayonne ≔ {i∣ i∈1‥NbWagon ∧ Destination(i)=Bayonne}" org.eventb.core.comment="La voie de Bayonne doit contenir tout les wagons qui ont la destination Bayonne" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

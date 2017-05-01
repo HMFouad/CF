@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Aiguille" org.eventb.core.type="ℙ(Aiguille)"/>
+<org.eventb.core.poIdentifier name="Feu" org.eventb.core.type="ℙ(Feu)"/>
+<org.eventb.core.poIdentifier name="Ville" org.eventb.core.type="ℙ(Ville)"/>
+<org.eventb.core.poIdentifier name="Bay" org.eventb.core.type="Aiguille"/>
+<org.eventb.core.poIdentifier name="Bayonne" org.eventb.core.type="Ville"/>
+<org.eventb.core.poIdentifier name="Destination" org.eventb.core.type="ℙ(ℤ×Ville)"/>
+<org.eventb.core.poIdentifier name="NbWagon" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Rouge" org.eventb.core.type="Feu"/>
+<org.eventb.core.poIdentifier name="Tou" org.eventb.core.type="Aiguille"/>
+<org.eventb.core.poIdentifier name="Toulouse" org.eventb.core.type="Ville"/>
+<org.eventb.core.poIdentifier name="Vert" org.eventb.core.type="Feu"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Projet/Context.bpo|org.eventb.core.poFile#Context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="NbWagon∈ℕ1" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Destination∈1 ‥ NbWagon → Ville" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="partition(Ville,{Toulouse},{Bayonne})" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="partition(Aiguille,{Tou},{Bay})" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="partition(Feu,{Vert},{Rouge})" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#4"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
