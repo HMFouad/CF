@@ -1,0 +1,169 @@
+\documentclass[a4paper]{book}
+\usepackage{fullpage}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+
+\usepackage{latexsym}
+\usepackage{fancyhdr}
+\usepackage{makeidx}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{moreverb}
+\usepackage{listings}
+
+\newcommand{\altarica}{{\sc AltaRica}}
+
+\begin{document}
+
+\title{Master 1, Conceptions Formelles\\
+Projet du module \altarica\\
+Synthèse (assistée) d'un contrôleur du niveau d'une cuve}
+
+\date{}
+
+\author{HOCINI Mohamed Fouad \and MAURICE Bastien}
+
+\maketitle
+
+\chapter{Le sujet}
+\input{tank}
+
+\chapter{Le rapport}
+\section{Rôle de la constante {\tt nbFailures} (2 points)}
+La constante nbFailures permet de définir le nombre maximal de pannes pouvant survenir. Elle permet ainsi lors des tests, de limiter le nombre de configuration possibles. La condition nbFailures >= (V[0].stucked + V[1].stucked + V[2].stucked); permet d'assurer que le nombre de valves en panne ne peut pas dépasser nbFailures. Elle nous permettra de générer les contrôleurs avec une possibilité de défaillance controlé.\
+
+\section{Résultats avec le contrôleur initial {\tt Ctrl}}
+\subsection{Calcul d'un contrôleur}
+\subsubsection{Avec 0 défaillance (1 point)}
+\lstinputlisting{Res/System0FCtrl.res}
+\lstinputlisting{Res/System0FCtrl0F1I.res}
+%\lstinputlisting{Res/System0FCtrl0F2I.res}
+%\lstinputlisting{Res/System0FCtrl0F3I.res}
+%\lstinputlisting{Res/System0FCtrl0F4I.res}
+\paragraph{Interprétation des résultats}
+On observe que le contrôleur de base ne comporte pas de situation de blocage (DL) mais admet 86 état de niveau critique (NC), cependant dès la premières itérations sur le contrôleur celle ci sont supprimer et le contrôleur est correct; les itérations suivantes ne sont donc pas nécessaire.\
+
+\subsubsection{Avec 1 défaillance (1 point)}
+\lstinputlisting{Res/System1FCtrl.res}
+\lstinputlisting{Res/System1FCtrl1F1I.res}
+%\lstinputlisting{Res/System1FCtrl1F2I.res}
+%\lstinputlisting{Res/System1FCtrl1F3I.res}
+%\lstinputlisting{Res/System1FCtrl1F4I.res}
+\paragraph{Interprétation des résultats}
+Dès l'apparition de défaillance sur les valves on constate que les NC augmente significativement (+243), et les itérations effectué sur le contrôleur dans le but de réduire les NC provoquent l'apparition de DL, inévitable dû au faite que par exemple si la valve sortante se bloque avec un débit nul le système se bloque.\
+
+\subsubsection{Avec 2 défaillances (1 point)}
+\lstinputlisting{Res/System2FCtrl.res}
+\lstinputlisting{Res/System2FCtrl2F1I.res}
+%\lstinputlisting{Res/System2FCtrl2F2I.res}
+%\lstinputlisting{Res/System2FCtrl2F3I.res}
+%\lstinputlisting{Res/System2FCtrl2F4I.res}
+\paragraph{Interprétation des résultats}
+Comme dans le cas précédent où le système a une défaillance, on observe aussi l’apparition de blocage et de situation critique, donc les remarques précédentes s’appliquent aussi dans ce cas.\
+\newpage
+
+\subsubsection{Avec 3 défaillances (1 point)}
+\lstinputlisting{Res/System3FCtrl.res}
+\lstinputlisting{Res/System3FCtrl3F1I.res}
+%\lstinputlisting{Res/System3FCtrl3F2I.res}
+%\lstinputlisting{Res/System3FCtrl3F3I.res}
+%\lstinputlisting{Res/System3FCtrl3F4I.res}
+\paragraph{Interprétation des résultats}
+On remarque que les itérations amène le contrôleur a complètement éviter les cas où la vanne de sortie est ouverte a 2, car les deux vannes d'entrée pourraient tomber en panne. On note que les deadlocks doivent correspondre aux cas où toutes les vannes sont fermées et bloquées.\
+
+\subsection{Calcul des contrôleurs optimisés (2 points)}
+Il a fallu intégrer la gestion des pannes en observant les pannes survenant lors du fonctionnement du système. Une simple assert dans le composant Système et notre contrôleur est capable de détecter les pannes.\
+
+\section{Rôle des composants {\tt ValveVirtual} et {\tt CtrlVV} (4 points)}
+Le composant ValveVirtual comme son nom l’indique sert à simuler le comportement d’une vanne en parfait état et stopper son utilisation lorsque cette dernière est défaillante. L’utilisation des ValveVirtual au sein du CtrlVV permet de gérer les pannes pouvant intervenir lors de l’utilisation d’une vanne afin d’éviter des situations de blocages et critiques (atteinte de la zone 0 ou de la zone nbSensors). Il est préférable de l’utiliser par rapport au contrôleur initiale car le comportement du contrôleur est aléatoire et ne gère pas le cas des pannes.\
+
+Il existe moins de transitions dans un système avec valve virtuel car le contrôleur est capable de détecter les pannes et donc ne cherche pas à activé une valve bloqué; on peut le vérifié en observant par exemple que pour le System2FCtrlVV any\_t = 15894 alors que pour le System2FCtrl any\_t = 44608.\
+
+\section{Résultats avec le contrôleur initial {\tt CtrlVV}}
+\subsection{Calcul d'un contrôleur}
+\subsubsection{Avec 0 défaillance (1 point)}
+\lstinputlisting{Res/System0FCtrlVV.res}
+\lstinputlisting{Res/System0FCtrlVV0F1I.res}
+%\lstinputlisting{Res/System0FCtrlVV0F2I.res}
+%\lstinputlisting{Res/System0FCtrlVV0F3I.res}
+%\lstinputlisting{Res/System0FCtrlVV0F4I.res}
+\paragraph{Interprétation des résultats}
+
+On peut observer que l'utilisation de valve virtuel n'impacte pas les débits ou le nombre de situations redoutées mais seulement le nombre de transitions possible sur le cas de 0 défaillance.\
+
+Dans le cas où les vannes ne sont pas défaillantes, on constate qu’il est possible d’éviter que le système se bloque, ainsi que les situations critiques.
+
+On peut donc déduire qu’une des caractéristique de ce contrôleur est qu’il est capable de gérer les pannes.\
+
+
+\subsubsection{Avec 1 défaillance (1 point)}
+\lstinputlisting{Res/System1FCtrlVV.res}
+\lstinputlisting{Res/System1FCtrlVV1F1I.res}
+%\lstinputlisting{Res/System1FCtrlVV1F2I.res}
+%\lstinputlisting{Res/System1FCtrlVV1F3I.res}
+%\lstinputlisting{Res/System1FCtrlVV1F4I.res}
+\paragraph{Interprétation des résultats}
+
+D’après les résultats, il est possible de détecter que le système soit bloquer et les situations critiques pouvant survenir au cours du fonctionnement du système.\
+
+Cette situation est dû au faite que le contrôleur à vannes simulées gère le cas où le système est défaillant en bloquant la vanne en cas de défaillance.\
+
+\subsubsection{Avec 2 défaillances (1 point)}
+\lstinputlisting{Res/System2FCtrlVV.res}
+\lstinputlisting{Res/System2FCtrlVV2F1I.res}
+%\lstinputlisting{Res/System2FCtrlVV2F2I.res}
+%\lstinputlisting{Res/System2FCtrlVV2F3I.res}
+%\lstinputlisting{Res/System2FCtrlVV2F4I.res}
+\paragraph{Interprétation des résultats}
+Le contrôleur n'a plus que 2 états, et dans les deux, la valve 2 est toujours sur 0. C'est donc que le tank ne reçois jamais d'eau. Il ne trouve qu'un seul coup gagnant qui est de ne rien fait.\
+
+\subsubsection{Avec 3 défaillances (1 point)}
+\lstinputlisting{Res/System3FCtrlVV.res}
+\lstinputlisting{Res/System3FCtrlVV3F1I.res}
+%\lstinputlisting{Res/System3FCtrlVV3F2I.res}
+%\lstinputlisting{Res/System3FCtrlVV3F3I.res}
+%\lstinputlisting{Res/System3FCtrlVV3F4I.res}
+\paragraph{Interprétation des résultats}
+Comme dans les deux cas précédents où le système a une ou deux défaillance(s), il est possible de détecter l’apparition de blocages et de situations critiques, donc les remarques précédentes s’appliquent aussi dans ce cas.\
+
+\subsection{Calcul des contrôleurs optimisés (2 points)}
+Pour optimiser ce contrôleur nous avons du intégrer une vanne qui ne tombe jamais en panne pour rendre le système plus robuste au lieu de bloquer la vanne comme le fait le contrôleur précédent. 
+
+\subsubsection{Avec 0 défaillance}
+\lstinputlisting{Res/System0FCtrlVR.res}
+\lstinputlisting{Res/System0FCtrlVR0F1I.res}
+\lstinputlisting{Res/System0FCtrlVR0F2I.res}
+\lstinputlisting{Res/System0FCtrlVR0F3I.res}
+\lstinputlisting{Res/System0FCtrlVR0F4I.res}
+
+\subsubsection{Avec 1 défaillance }
+\lstinputlisting{Res/System1FCtrlVR.res}
+\lstinputlisting{Res/System1FCtrlVR1F1I.res}
+\lstinputlisting{Res/System1FCtrlVR1F2I.res}
+\lstinputlisting{Res/System1FCtrlVR1F3I.res}
+\lstinputlisting{Res/System1FCtrlVR1F4I.res}
+
+\subsubsection{Avec 2 défaillances (1 point)}
+\lstinputlisting{Res/System2FCtrlVR.res}
+\lstinputlisting{Res/System2FCtrlVR2F1I.res}
+\lstinputlisting{Res/System2FCtrlVR2F2I.res}
+\lstinputlisting{Res/System2FCtrlVR2F3I.res}
+\lstinputlisting{Res/System2FCtrlVR2F4I.res}
+
+\subsubsection{Avec 3 défaillances (1 point)}
+\lstinputlisting{Res/System3FCtrlVR.res}
+\lstinputlisting{Res/System3FCtrlVR3F1I.res}
+\lstinputlisting{Res/System3FCtrlVR3F2I.res}
+\lstinputlisting{Res/System3FCtrlVR3F3I.res}
+\lstinputlisting{Res/System3FCtrlVR3F4I.res}
+
+\section{Conclusion (2 points)}
+
+On observe que les itérations sur le contrôleur de base permettent de réduire le nombre de situations redoutées et d'améliorer les contrôleurs en réduisant les transitions possible, mais dès lors que le nombre de défaillances est trop élevé, les contrôleurs obtenus de manière automatique ne permet que l'arrêt du système dès son lancement pour évité les situations de blocage.\
+
+Notre choix final portera sur le System3FCtrlVR car il permet d’éviter à la fois les situation redoutées tels que le blocage du système et les niveaux critiques. De plus il nous permet de maximiser le débit de la vanne aval en utilisant les priorités d’Altarica. Le but est de privilégier l’augmentation du débit de la vanne aval par rapport aux autres actions, et privilégier la stagnation du débit par rapport à sa diminution. Une autre alternative aurait été de réparer la vanne mais les contraintes du cahier des charges ne le permettent pas.\
+
+\end{document}
